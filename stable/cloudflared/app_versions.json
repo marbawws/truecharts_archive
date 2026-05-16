@@ -4,7 +4,7 @@
         "supported": true,
         "healthy_error": null,
         "location": "/home/runner/_work/catalog/catalog/stable/cloudflared/16.4.0",
-        "last_update": "2026.5.0 13:59:23",
+        "last_update": "2026-05-01 13:59:23",
         "required_features": [
             "definitions/timezone",
             "normalize/interfaceConfiguration",
