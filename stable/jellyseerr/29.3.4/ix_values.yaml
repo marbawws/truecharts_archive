@@ -1,0 +1,26 @@
+image:
+  repository: oci.trueforge.org/containerforge/seerr
+  tag: "3.2.0@sha256:1b6586b328bbab63cd705965a32426677f59532096ada19180a5cde02eb6f1da"
+  pullPolicy: IfNotPresent
+service:
+  main:
+    ports:
+      main:
+        port: 10241
+persistence:
+  config:
+    enabled: true
+    mountPath: "/app/config"
+portal:
+  open:
+    enabled: true
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          env:
+            PORT: "{{ .Values.service.main.ports.main.port }}"
+            # User Defined
+            JELLYFIN_TYPE: ""
+            LOG_LEVEL: "info"
